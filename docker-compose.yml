@@ -1,0 +1,10 @@
+version: "3.5"
+
+services:
+  copier:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: copier
+    volumes:
+      - .:/app
