@@ -11,9 +11,10 @@ Lightweight alpine-based docker container to run [copier](https://github.com/cop
 ## Get started
 
 ```shell
-# TODO: Figure out how to pull from github
+# Pull container from github
+docker pull ghcr.io/datf/copier-runner:latest
 
-docker run -it copier \
+docker run -it copier-runner \
   copy gh:path/to/copier-template
 ```
 
@@ -28,6 +29,6 @@ git clone https://github.com/datf/copier-runner
 docker compose build
 
 # Run copier
-docker-compose run --rm -it copier \
+docker compose run --rm -it copier \
   copy gh:path/to/copier-template
 ```
