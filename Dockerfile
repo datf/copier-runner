@@ -1,4 +1,7 @@
-FROM docker.io/node:26-alpine AS base
+FROM docker.io/node:26-alpine
+
+LABEL org.opencontainers.image.source=https://github.com/datf/copier-runner
+LABEL org.opencontainers.image.description="Runner for copier"
 
 RUN npm install --global npm@latest corepack@latest pnpm@latest
 RUN apk add --update --no-cache python3 py3-pip git
