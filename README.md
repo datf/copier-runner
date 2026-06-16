@@ -5,7 +5,7 @@ Lightweight alpine-based docker container to run [copier](https://github.com/cop
 ### Features
 - Based on official `node:26-alpine` image
 - Contains nodejs, npm, pnpm, python3, pip3, git and copier.
-- Runs as non-root user
+- Runs as the user of the current folder.
 - Default volume configuration persists results back to the host machine.
 
 ## Get started
@@ -16,6 +16,18 @@ docker pull ghcr.io/datf/copier-runner:latest
 
 docker run -it copier-runner \
   copy gh:path/to/copier-template
+```
+
+Additionally you can add this alias:
+
+```shell
+alias copier='docker run -it --rm -u "$(id -u):$(id -g)" -v "$(pwd):/app" ghcr.io/datf/copier:latest'
+```
+
+Then run as you would with the copier command:
+
+```shell
+copier copy gh:path/to/copier-template
 ```
 
 ## Build image locally

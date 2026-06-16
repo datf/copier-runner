@@ -5,15 +5,17 @@ LABEL org.opencontainers.image.description="Runner for copier"
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
+ENV PIP_BREAK_SYSTEM_PACKAGES=1
 
 RUN npm install --global npm@latest corepack@latest pnpm@latest
-RUN apk add --update --no-cache python3 py3-pip git
-RUN pip3 install --break-system-packages --no-cache --upgrade pip setuptools copier
+RUN apk add --update --no-cache python3 py3-pip git su-exec
+RUN pip3 install --no-cache --upgrade pip setuptools copier
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 WORKDIR /app
-RUN adduser -D appuser
-USER appuser
 
-ENTRYPOINT ["copier"]
+ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["--version"]
