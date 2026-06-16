@@ -11,11 +11,9 @@ RUN npm install --global npm@latest corepack@latest pnpm@latest
 RUN apk add --update --no-cache python3 py3-pip git su-exec
 RUN pip3 install --no-cache --upgrade pip setuptools copier
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
 WORKDIR /app
+USER node
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["copier"]
 
 CMD ["--version"]

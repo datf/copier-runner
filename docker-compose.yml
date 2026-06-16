@@ -10,6 +10,5 @@ services:
         - linux/amd64
         - linux/arm64
     container_name: copier
-    user: "${UID:-1000}:${GID:-1000}"
     volumes:
-      - .:/app
+      - .:/app:z

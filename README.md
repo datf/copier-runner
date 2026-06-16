@@ -21,7 +21,12 @@ docker run -it copier-runner \
 Additionally you can add this alias:
 
 ```shell
-alias copier='docker run -it --rm -u "$(id -u):$(id -g)" -v "$(pwd):/app" ghcr.io/datf/copier-runner:latest'
+# For docker
+alias copier='docker run -it --rm -u "$(id -u):$(id -g)" -v "$(pwd):/app:z" ghcr.io/datf/copier-runner:latest'
+
+# For podman
+alias copier='podman run -it --rm --userns=keep-id -v "$(pwd):/app:z" ghcr.io/datf/copier-runner:latest'
+
 ```
 
 Then run as you would with the copier command:
