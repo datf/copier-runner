@@ -28,7 +28,7 @@
       "automerge": true
     }
   ],
-  "baseBranches": [
+  "baseBranchPatterns": [
     "main"
   ]
 }
