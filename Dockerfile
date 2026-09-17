@@ -18,13 +18,13 @@ RUN npm install --global npm@$NPM_VERSION corepack@$COREPACK_VERSION \
     && corepack enable \
     && corepack prepare pnpm@$PNPM_VERSION --activate
 
-# renovate: datasource=repology depName=alpine_3_24/python3 versioning=loose
+# renovate: datasource=apk packageName=python3 versioning=loose
 ENV PYTHON3_VERSION="3.14.7-r1"
-# renovate: datasource=repology depName=alpine_3_24/py3-pip versioning=loose
+# renovate: datasource=apk packageName=py3-pip versioning=loose
 ENV PIP_APK_VERSION="26.1.2-r0"
-# renovate: datasource=repology depName=alpine_3_24/git versioning=loose
+# renovate: datasource=apk packageName=git versioning=loose
 ENV GIT_APK_VERSION="2.54.0-r0"
-# renovate: datasource=repology depName=alpine_3_24/su-exec versioning=loose
+# renovate: datasource=apk packageName=su-exec versioning=loose
 ENV SU_EXEC_APK_VERSION="0.3-r0"
 RUN apk add --update --no-cache \
     python3=$PYTHON3_VERSION \
