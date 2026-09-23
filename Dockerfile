@@ -9,7 +9,7 @@ ENV PIP_BREAK_SYSTEM_PACKAGES=1
 ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 
 # renovate: datasource=npm depName=npm
-ENV NPM_VERSION="12.0.2"
+ENV NPM_VERSION="12.1.0"
 # renovate: datasource=npm depName=corepack
 ENV COREPACK_VERSION="0.36.0"
 # renovate: datasource=npm depName=pnpm
