@@ -13,7 +13,7 @@ ENV NPM_VERSION="12.1.0"
 # renovate: datasource=npm depName=corepack
 ENV COREPACK_VERSION="0.36.0"
 # renovate: datasource=npm depName=pnpm
-ENV PNPM_VERSION="12.5.1"
+ENV PNPM_VERSION="12.6.0"
 RUN npm install --global npm@$NPM_VERSION corepack@$COREPACK_VERSION \
     && corepack enable \
     && corepack prepare pnpm@$PNPM_VERSION --activate
