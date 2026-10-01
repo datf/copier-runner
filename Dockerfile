@@ -9,7 +9,7 @@ ENV PIP_BREAK_SYSTEM_PACKAGES=1
 ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 
 # renovate: datasource=npm depName=npm
-ENV NPM_VERSION="12.1.0"
+ENV NPM_VERSION="12.2.0"
 # renovate: datasource=npm depName=corepack
 ENV COREPACK_VERSION="0.36.0"
 # renovate: datasource=npm depName=pnpm
@@ -19,7 +19,7 @@ RUN npm install --global npm@$NPM_VERSION corepack@$COREPACK_VERSION \
     && corepack prepare pnpm@$PNPM_VERSION --activate
 
 # renovate: datasource=apk packageName=python3 versioning=loose
-ENV PYTHON3_VERSION="3.14.7-r1"
+ENV PYTHON3_VERSION="3.14.8-r0"
 # renovate: datasource=apk packageName=py3-pip versioning=loose
 ENV PIP_APK_VERSION="26.1.2-r0"
 # renovate: datasource=apk packageName=git versioning=loose
