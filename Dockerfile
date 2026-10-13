@@ -37,7 +37,7 @@ ENV PIP_VERSION="26.2.1"
 # renovate: datasource=pypi depName=setuptools
 ENV SETUPTOOLS_VERSION="84.0.0"
 # renovate: datasource=pypi depName=copier
-ENV COPIER_VERSION="9.19.0"
+ENV COPIER_VERSION="9.19.1"
 RUN pip3 install --no-cache --upgrade \
     pip==$PIP_VERSION \
     setuptools==$SETUPTOOLS_VERSION \
