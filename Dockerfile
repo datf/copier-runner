@@ -33,9 +33,9 @@ RUN apk add --update --no-cache \
     su-exec=$SU_EXEC_APK_VERSION
 
 # renovate: datasource=pypi depName=pip
-ENV PIP_VERSION="26.2.1"
+ENV PIP_VERSION="26.2.2"
 # renovate: datasource=pypi depName=setuptools
-ENV SETUPTOOLS_VERSION="84.2.0"
+ENV SETUPTOOLS_VERSION="84.2.1"
 # renovate: datasource=pypi depName=copier
 ENV COPIER_VERSION="9.19.1"
 RUN pip3 install --no-cache --upgrade \
