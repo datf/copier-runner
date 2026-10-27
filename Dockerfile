@@ -19,7 +19,7 @@ RUN npm install --global npm@$NPM_VERSION corepack@$COREPACK_VERSION \
     && corepack prepare pnpm@$PNPM_VERSION --activate
 
 # renovate: datasource=apk packageName=python3 versioning=loose
-ENV PYTHON3_VERSION="3.14.10-r0"
+ENV PYTHON3_VERSION="3.14.10-r1"
 # renovate: datasource=apk packageName=py3-pip versioning=loose
 ENV PIP_APK_VERSION="26.1.2-r0"
 # renovate: datasource=apk packageName=git versioning=loose
