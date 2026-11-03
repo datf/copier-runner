@@ -33,7 +33,7 @@ RUN apk add --update --no-cache \
     su-exec=$SU_EXEC_APK_VERSION
 
 # renovate: datasource=pypi depName=pip
-ENV PIP_VERSION="26.2.2"
+ENV PIP_VERSION="26.3"
 # renovate: datasource=pypi depName=setuptools
 ENV SETUPTOOLS_VERSION="84.2.1"
 # renovate: datasource=pypi depName=copier
