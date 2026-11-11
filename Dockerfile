@@ -23,7 +23,7 @@ ENV PYTHON3_VERSION="3.14.10-r1"
 # renovate: datasource=apk packageName=py3-pip versioning=loose
 ENV PIP_APK_VERSION="26.1.2-r0"
 # renovate: datasource=apk packageName=git versioning=loose
-ENV GIT_APK_VERSION="2.54.0-r0"
+ENV GIT_APK_VERSION="2.54.1-r0"
 # renovate: datasource=apk packageName=su-exec versioning=loose
 ENV SU_EXEC_APK_VERSION="0.3-r0"
 RUN apk add --update --no-cache \
